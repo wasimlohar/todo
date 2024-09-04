@@ -13,7 +13,8 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-route::get('/', [TaskController::class, 'index']);
+route::get('/tasks/view', [TaskController::class, 'index'])->name('tasks.view');
+route::get('/', [TaskController::class, 'show']);
 Route::post('/tasks', [TaskController::class, 'store']);
 Route::patch('/tasks/{task}', [TaskController::class, 'update']);
 Route::delete('/tasks/{task}', [TaskController::class, 'destroy']);
