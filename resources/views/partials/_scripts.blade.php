@@ -39,8 +39,8 @@
                     table.row.add([
                         1,
                         response.name,
-                        task.is_completed ? '<span class="badge badge-success"><i class="fa-solid fa-hourglass-end"></i> Done</span>' : '<span class="badge badge-warning"><i class="fa-solid fa-hourglass-half"></i> Pending</span>',
-                        '<button class="btn btn-success btn-action mark-complete" data-id="' + task.id + '"><i class="fa-solid fa-check"></i></button> | <button class="btn btn-danger btn-action delete-task" data-id="' + task.id + '"><i class="fa-solid fa-xmark"></i></button>'
+                        response.is_completed ? '<span class="badge badge-success"><i class="fa-solid fa-hourglass-end"></i> Done</span>' : '<span class="badge badge-warning"><i class="fa-solid fa-hourglass-half"></i> Pending</span>',
+                        '<button class="btn btn-success btn-action mark-complete" data-id="' + response.id + '"><i class="fa-solid fa-check"></i></button> | <button class="btn btn-danger btn-action delete-task" data-id="' + response.id + '"><i class="fa-solid fa-xmark"></i></button>'
                     ]).draw(false);
                     toastr.success('Task added successfully');
                     $('#task_name').val(''); // Clear the input field
